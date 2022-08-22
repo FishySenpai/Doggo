@@ -31,7 +31,7 @@ window.addEventListener("load", function () {
       this.score = 0;
       this.time = 0;
       this.lives = 5;
-      this.winningScore = 40;
+      this.winningScore = 30;
       this.maxTime = 30000;
       this.gameOver = false;
       this.fillColor = 'black'
