@@ -7,13 +7,13 @@ import { UI } from "./UI.js"
 window.addEventListener("load", function () {
   const canvas = document.getElementById("canvas1");
   const ctx = canvas.getContext("2d");
-  canvas.width = 1440;
-  canvas.height = 500;
+  canvas.width = 1800;
+  canvas.height = 900;
   class Game {
     constructor(width, height) {
       this.width = width;
       this.height = height;
-      this.groundMargin = 50;
+      this.groundMargin = 140;
       this.speed = 0;
       this.maxSpeed = 6;
       this.background = new Background(this);

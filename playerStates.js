@@ -41,7 +41,7 @@ export class Running extends State {
   }
   enter() {
     this.frameX = 0;
-    this.game.player.maxFrame = 6;
+    this.game.player.maxFrame = 8;
     this.game.player.frameY = 3;
   }
   handleInput(input) {
@@ -67,7 +67,7 @@ export class Jumping extends State {
     super("JUMPING", game);
   }
   enter() {
-    if (this.game.player.onGround()) this.game.player.vy -= 26;
+    if (this.game.player.onGround()) this.game.player.vy -= 37;
     this.frameX = 0;
     this.game.player.maxFrame = 6;
     this.game.player.frameY = 1;
@@ -131,9 +131,9 @@ export class Rolling extends State {
       input.includes("ArrowUp") &&
       this.game.player.onGround()
     ) {
-      this.game.player.vy = -27;
-    } else if (input.includes("ArrowDown") && !this.game.player.onGround) {
-      this.game.player.setState(states.DIVING, 2);
+      this.game.player.vy = -37;
+    } else if (input.includes("ArrowDown") && !this.game.player.onGround()) {
+      this.game.player.setState(states.DIVING, 0);
     }
   }
 }
@@ -146,7 +146,7 @@ export class Diving extends State {
     this.frameX = 0;
     this.game.player.maxFrame = 6;
     this.game.player.frameY = 6;
-    this.game.player.vy = 15;
+    this.game.player.vy = 37;
   }
 
   handleInput(input) {

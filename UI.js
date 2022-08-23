@@ -35,7 +35,7 @@ export class UI {
           this.game.width * 0.5,
           this.game.height * 0.5
         );
-        context.font = this.fontSize * 0.7 + "px " + this.fontFamily;
+        context.font = this.fontSize * 0.8 + "px " + this.fontFamily;
         context.fillText(
           "What are the creatures of the night afraid of? YOU fking shlut!!!",
           this.game.width * 0.5,
@@ -47,11 +47,11 @@ export class UI {
           this.game.width * 0.5,
           this.game.height * 0.5
         );
-        context.font = this.fontSize * 0.7 + "px " + this.fontFamily;
+        context.font = this.fontSize * 0.8 + "px " + this.fontFamily;
         context.fillText(
           "Boo-hoo, get good kid",
           this.game.width * 0.5,
-          this.game.height * 0.5 + 20
+          this.game.height * 0.5 + 30
         );
       }
     }
