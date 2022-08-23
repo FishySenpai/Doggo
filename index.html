@@ -30,7 +30,16 @@
     <img id="fire" src="./assets/fire.png" />
     <img id="collisionAnimation" src="./assets/boom.png" />
     <img id="lives" src="./assets/heart.png" />
-
+    <script>
+      var audio = document.createElement("AUDIO");
+      document.body.appendChild(audio);
+      audio.src = "./assets/music.m4a";
+      console.log(audio.src)
+      window.addEventListener("mousemove", function () {
+        audio.play();
+        audio.volume = 0.2;
+      });
+    </script>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
