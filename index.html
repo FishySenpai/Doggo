@@ -35,7 +35,7 @@
       document.body.appendChild(audio);
       audio.src = "./assets/music.m4a";
       console.log(audio.src)
-      window.addEventListener("mousemove", function () {
+      window.addEventListener("keydown", function () {
         audio.play();
         audio.volume = 0.2;
       });
